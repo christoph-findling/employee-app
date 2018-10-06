@@ -1,0 +1,29 @@
+
+.header {
+    width: 100%;
+    @include rem(height, 2);
+    @include rem(padding-top, 1);
+    align-content: center;
+    align-items: center;
+    display: flex;
+    color: white;
+  
+    h1{
+      margin: 0;
+    }
+  
+    a {
+      color: $secondaryBackground;
+      cursor: pointer;
+      text-decoration: none;
+      font-weight: 600;
+      @include rem(padding, 0.2 0.3);
+      @include rem(margin, 0 0.5);
+      &:hover, &:focus, &:active {
+        color: rgb(255, 179, 179);
+      }
+      i {
+        @include rem(font-size, 2.5);
+      }
+    }
+  }
