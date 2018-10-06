@@ -1,0 +1,263 @@
+//BUTTONS
+.red_button {
+  width: 100%;
+  @include rem(height, 3);
+  @include rem(font-size, 1.5);
+  @include rem(line-height, 3);
+  text-align: center;
+  vertical-align: middle;
+  justify-content: center;
+  background-color: rgb(40, 78, 150);
+  color: #fff;
+  cursor: pointer;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+
+// IMAGE CATEGORY OVERLAY
+.img_category {
+  display: inline-block;
+  @include rem(padding, 0.5);
+  font-weight: 600;
+  text-transform: uppercase;
+  font-family: $imgCategoryFont;
+  background: $imgCategoryBackground;
+  color: $imgCategoryColor;
+}
+
+// IMAGE TITLE OVERLAY
+.img_title {
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+  box-sizing: border-box;
+  @include rem(padding-top, 1);
+  @include rem(padding-bottom, 2);
+  @include rem(padding-right, 0.5);
+  @include rem(padding-left, 0.5);
+  color: $imgTitleColor;
+  background-color: $imgTitleBackground;
+  @include rem(font-size, $imgTitleFontSize);
+  font-weight: $imgTitleFontWeight;
+  text-align: center;
+  justify-content: center;
+}
+
+//NAV & SIDENAV STYLES
+
+.navitems__desktop {
+  display: none;
+  @include breakpoint(large) {
+    display: flex;
+  }
+}
+
+.nav__container {
+  @include rem(height, $navHeight);
+  top: 0;
+  left: 0;
+  position: fixed;
+  width: 100%;
+  background-color: $navBackgroundColor;
+  z-index: 10;
+}
+.nav {
+  display: flex;
+  height: 100%;
+  align-items: center;
+  ul {
+    display: flex;
+    li {
+      list-style: none;
+      a {
+        font-weight: 600;
+        @include rem(padding-right, 2);
+        text-decoration: none;
+        color: $navColor;
+      }
+    }
+  }
+}
+.nav__logo a {
+  @include rem(margin-left, 0.8);
+  @include rem(font-size, $navLogoSize);
+  font-weight: 600;
+  color: $navColor;
+  text-decoration: none;
+}
+.nav__burger {
+  color: $navColor;
+  @include rem(font-size, $navBurgerSize);
+  @include rem(margin-left, 0.5);
+  @include breakpoint(large) {
+    display: none;
+  }
+}
+
+.spacer {
+  flex: 1;
+}
+
+.nav__sidedrawer {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  z-index: 11;
+  background-color: $navSideDrawerBackground;
+  @include rem(width, $navSideDrawerWidth);
+  transform: translateX(-100%);
+  transition: transform 0.2s ease-out;
+  ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    @include rem(padding-left, 1.5);
+  }
+  li {
+    @include rem(margin-bottom, 0.5);
+  }
+  a {
+    text-decoration: none;
+    font-weight: 600;
+    color: $navColor;
+    @include rem(font-size, $navSideDrawerFontSize);
+    @include rem(line-height, 2.5);
+  }
+}
+
+.nav__sidedrawer.showDrawer {
+  transform: translateX(0);
+  transition: transform 0.2s ease-in;
+}
+
+// BACKDROP STYLES
+.backdrop {
+  background-color: rgba(255, 255, 255, 0.5);
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+  top: 0;
+  left: 0;
+}
+
+// INFINITE SCROLL STYLES
+
+.loader {
+  font-size: 1.5rem;
+  text-align: center;
+  padding: 2rem;
+  font-weight: 600;
+  color: darkgray;
+}
+
+// BUTTON STYLES
+.button__back__container {
+  display: flex;
+  @include rem(margin-top, 1);
+  text-align: center;
+  a {
+    text-decoration: none;
+  }
+  .button__back {
+    color: white;
+    @include rem(padding, 0.8 1.2);
+    display: flex;
+    background-color: rgb(204, 204, 204);
+    &:hover,
+    &:focus,
+    &:active {
+      outline: none;
+      background-color: rgb(156, 156, 156);
+    }
+  }
+  .nav__caretleft {
+    @include rem(font-size, 1.8);
+  }
+  .button__back__text {
+    @include rem(margin-left, 0.5);
+    @include rem(line-height, 1.9);
+    @include rem(font-size, 1.2);
+    font-weight: 600;
+  }
+}
+
+// FORM STYLES
+
+.form__container {
+  display: flex;
+  form {
+    @include rem(width, $signinFormWidth);
+    margin: 0 auto;
+    @include rem(padding, 1);
+  }
+  .news__form {
+    width: 100%;
+  }
+
+  input {
+    width: 100%;
+    overflow: visible;
+    @include rem(padding, 0.5);
+    @include rem(font-size, $inputFontSize);
+    @include rem(margin, 0.5 0);
+    box-sizing: border-box;
+    border: 2px solid lightgray;
+    box-shadow: none;
+  }
+}
+
+.button__container {
+  @include rem(margin-top, 1);
+  display: flex;
+}
+.button__coral {
+  -webkit-appearance: button;
+  @include rem(padding, 0.5 1);
+  @include rem(font-size, $buttonSubmitFontSize);
+  background-color: rgb(250, 137, 96);
+  box-sizing: border-box;
+  border: none;
+  color: white;
+  cursor: pointer;
+  &:hover,
+  &:active,
+  &:focus {
+    outline: none;
+    background-color: rgb(252, 94, 36);
+  }
+}
+.button__delete__article {
+  text-transform: none;
+  font-weight: 400;
+  position: absolute;
+  z-index: 2;
+  @include rem(margin, 0.3);
+  @include rem(padding, 0.3 0.5);
+  @include rem(font-size, 1.5);
+  background-color: rgba(216, 30, 30, 0.9);
+  color: white;
+  border: 1px solid white;
+  cursor: pointer;
+  right: 0;
+
+  &:hover,
+  &:active {
+    color: rgb(255, 0, 0);
+    border-color: rgb(255, 0, 0);
+  }
+  &:focus {
+    outline: none;
+  }
+}
+
+// NEWS EDITOR
+.rdw-editor-main {
+  background-color: white;
+  @include rem(margin, 1 0);
+  border: 2px solid lightgrey;
+}
+.form__error {
+  color: red;
+}

@@ -1,0 +1,66 @@
+/* VARIABLES */
+
+/* TYPOGRAPHY */
+
+/* TEXT SIZES */
+
+$fontSizeSmall: 1; 	
+$fontSizeStandard: 1.2; 
+$fontSizeLarge: 1.8; 	
+	
+$fontSizeH3: 1.8;
+$fontSizeH2: 2.4;
+$fontSizeH1: 3;
+
+$fontSizeH1Mobile: 3.2;
+
+/* VERTICAL RHYTHM */
+
+$lineHeightMin: 0.7;
+$lineHeightStandard: $lineHeightMin * 4;
+$verticalPadding: $lineHeightMin * 8;
+
+/* GRID */
+
+$columnGutter: $lineHeightMin * 4; 	
+	
+$maxWidthColumn: 68;
+$maxWidthParagraph: $maxWidthColumn - $columnGutter; 
+$maxWidthPage: 144;
+
+/* FONT STACKS */
+
+$mainFont: 'Roboto', sans-serif;
+$fontHighlight: serif;
+// $fontIcon: FontAwesome;
+
+
+/* DEFAULT SIZES */
+
+$borderRadiusStandard: $lineHeightMin / 2;
+
+/* COLORS */
+
+$pageBackground: #fff;
+$secondaryBackground: #f88b25;
+$secondaryBackgroundHover: darken($secondaryBackground, 5);
+
+$backgroundEmployeeContainer: rgba(79, 79, 139, 0.849);
+
+$colorMain: #424242; /* Dark Gray */
+$colorPrimary: rgb(114, 31, 110); /* Gray Greenish */
+$colorSecondary: #FED731; /* Yellow */
+
+$colorLink: $colorPrimary;
+$colorLinkVisited: darken($colorLink, 20);
+$colorLinkHover: darken($colorLink, 20); 
+$colorLinkActive: darken($colorLink, 10);
+
+$colorHeader: $colorMain; /* Dark Gray */
+$colorMainLight: #DDDDDD; /* Medium Gray */
+$colorBackground: #ffffff; /* White */
+$colorBackgroundDark: #F7F7F7; /* Light Gray */
+$colorHighlight: $colorPrimary; 
+
+$colorError: $colorPrimary;
+$colorSuccess: #049839;
